@@ -1,0 +1,24 @@
+<h2>suggestion:</h2>
+<div *ngIf="drink" id="suggestion" [routerLink]="['/about',drink.idDrink]">
+    <img [src]="drink.strDrinkThumb" [alt]="drink.strDrink">
+    <div id="details">
+        <h3>{{drink.strDrink}}</h3>
+        <br>
+        <p> <span class="title">Alcohol:</span> {{drink.strAlcoholic}}</p>
+        <p> <span class="title">Glass:</span> {{drink.strGlass}}</p>
+        <br>
+        <p class="title">Ingredients:</p>
+        <div id="ingredients">
+            <p *ngFor="let ingredient of ingredients"> <span *ngIf="ingredient.measure">{{ingredient.measure}} - </span>
+                {{ingredient.name}};</p>
+        </div>
+        <br>
+        <p class="title">Instruction:</p>
+        <p>{{drink.strInstructions}}</p>
+    </div>
+</div>
+
+<app-cagetories [title]="'Cocktail'"></app-cagetories>
+<app-cagetories [title]="'Shake'"></app-cagetories>
+<app-cagetories [title]="'Shot'"></app-cagetories>
+<app-cagetories [title]="'Soft Drink'"></app-cagetories>

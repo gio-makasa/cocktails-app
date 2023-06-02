@@ -1,7 +1,10 @@
 <div class="categories">
-    <h2>{{title}}:</h2>
+    <div class="heading">
+        <h2>{{title}}:</h2>
+        <h2>See All</h2>
+    </div>
     <div class="items">
-        <div class="item" *ngFor="let drink of drinks">
+        <div class="item" *ngFor="let drink of drinks" [routerLink]="['/about',drink.idDrink]">
             <img [src]="drink.strDrinkThumb" [alt]="drink.strDrink" class="drinkPhoto">
             <h3>{{drink.strDrink}}</h3>
         </div>

@@ -1,0 +1,25 @@
+<main *ngIf="drink" [routerLink]="['/about',drink.idDrink]">
+    <img [src]="drink.strDrinkThumb" [alt]="drink.strDrink">
+    <div id="details">
+        <h3>{{drink.strDrink}}</h3>
+        <br>
+        <p> <span class="title">Alcohol:</span> {{drink.strAlcoholic}}</p>
+        <p> <span class="title">Glass:</span> {{drink.strGlass}}</p>
+        <p> <span class="title">Category:</span> {{drink.strCategory}}</p>
+        <br>
+        <p class="title">Ingredients:</p>
+        <div id="ingredients">
+            <div *ngFor="let ingredient of ingredients" class="ingredient">
+                <img src='{{"https://www.thecocktaildb.com/images/ingredients/"+ingredient.name+".png"}}'
+                    [alt]="ingredient.name">
+                <p *ngIf="ingredient.measure">{{ingredient.measure}}</p>
+                <p>{{ingredient.name}}</p>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div id="instruction">
+        <p class="title">Instruction:</p>
+        <p>{{drink.strInstructions}}</p>
+    </div>
+</main>

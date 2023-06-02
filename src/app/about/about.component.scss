@@ -1,0 +1,61 @@
+main {
+    display: grid;
+    width: 100%;
+    font-size: larger;
+    text-align: center;
+    background-color: #7A3E3E;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+        'img details'
+        'instruction instruction';
+
+    .title {
+        color: #47A992;
+        font-size: larger;
+    }
+
+    >img {
+        width: 100%;
+        grid-area: img;
+    }
+
+    #details {
+        position: relative;
+        width: 100%;
+        padding: 0 1rem;
+        grid-area: details;
+
+        h3 {
+            font-size: xx-large;
+        }
+
+        #ingredients {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            .ingredient {
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                justify-content: center;
+
+                >img {
+                    width: 8rem;
+                    margin: auto;
+                }
+
+                p:nth-child(2){
+                    color: grey;
+                }
+            }
+        }
+    }
+
+    #instruction {
+        padding: 2rem;
+        grid-area: instruction;
+    }
+}

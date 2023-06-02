@@ -1,0 +1,52 @@
+#suggestion {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+
+    img {
+        width: 25rem;
+    }
+
+    #details {
+        position: relative;
+        background-color: #7A3E3E;
+        width: 100%;
+        text-align: center;
+        font-size: larger;
+        padding: 0 1rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            right: 100%;
+            top: 0;
+            width: 3rem;
+            height: 100%;
+            --mask:
+                radial-gradient(32.02px at 45.00px 50%, #000 99%, #0000 101%) 0 calc(50% - 40px)/100% 80px,
+                radial-gradient(32.02px at -25px 50%, #0000 99%, #000 101%) 20px 50%/100% 80px repeat-y;
+            -webkit-mask: var(--mask);
+            mask: var(--mask);
+        }
+
+
+
+        h3 {
+            font-size: xx-large;
+        }
+
+        .title {
+            color: #47A992;
+            font-size: larger;
+        }
+
+        #ingredients {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+
+}

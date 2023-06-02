@@ -1,6 +1,16 @@
 .categories {
     margin-top: 5rem;
 
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        h2:last-child {
+            font-size: 1.5rem;
+        }
+    }
+
     .items {
         display: flex;
         overflow-x: scroll;
@@ -26,6 +36,7 @@
             position: relative;
             width: fit-content;
             padding-bottom: 0.5rem;
+            cursor: pointer;
 
             .drinkPhoto {
                 width: 15rem;
