@@ -10,9 +10,21 @@ body {
     background-color: #482121;
     padding: 0 1rem;
 
-    h2{
+    h2 {
         text-transform: capitalize;
         margin-bottom: 1rem;
         font-size: 2rem;
+    }
+}
+
+.item {
+    position: relative;
+    // width: min-content;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+
+    .drinkPhoto {
+        width: 15rem;
+        border-radius: 1rem;
     }
 }

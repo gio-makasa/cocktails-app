@@ -1,12 +1,11 @@
-<div class="categories">
-    <div class="heading">
-        <h2>{{title}}:</h2>
-        <h2 class="seeAll" [routerLink]="['/list','c',title]">See All</h2>
-    </div>
-    <div class="items">
+<main>
+    <ng-container *ngIf="drinks.length>0; else elseTemplate">
         <div class="item" *ngFor="let drink of drinks" [routerLink]="['/about',drink.idDrink]">
             <img [src]="drink.strDrinkThumb" [alt]="drink.strDrink" class="drinkPhoto">
             <h3>{{drink.strDrink}}</h3>
         </div>
-    </div>
-</div>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <p>NO DATA...</p>
+    </ng-template>
+</main>

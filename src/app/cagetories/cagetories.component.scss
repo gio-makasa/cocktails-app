@@ -8,6 +8,8 @@
 
         h2:last-child {
             font-size: 1.5rem;
+            text-decoration: underline;
+            cursor: pointer;
         }
     }
 
@@ -30,18 +32,6 @@
         &::-webkit-scrollbar-thumb {
             background: rgb(153, 0, 0);
             border-radius: 1rem;
-        }
-
-        .item {
-            position: relative;
-            width: fit-content;
-            padding-bottom: 0.5rem;
-            cursor: pointer;
-
-            .drinkPhoto {
-                width: 15rem;
-                border-radius: 1rem;
-            }
         }
     }
 }

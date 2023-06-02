@@ -9,7 +9,7 @@
         <br>
         <p class="title">Ingredients:</p>
         <div id="ingredients">
-            <div *ngFor="let ingredient of ingredients" class="ingredient">
+            <div *ngFor="let ingredient of ingredients" class="ingredient" [routerLink]="['/list','i',ingredient.name]">
                 <img src='{{"https://www.thecocktaildb.com/images/ingredients/"+ingredient.name+".png"}}'
                     [alt]="ingredient.name">
                 <p *ngIf="ingredient.measure">{{ingredient.measure}}</p>

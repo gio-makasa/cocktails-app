@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CagetoriesComponent } from './cagetories/cagetories.component';
 import { SearchComponent } from './search/search.component';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './pages/about/about.component';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ListComponent } from './pages/list/list.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent  },
   { path: 'about/:id', component: AboutComponent },
+  { path: 'list/:filter/:filterValue', component: ListComponent },
 ]
 
 @NgModule({
@@ -22,6 +24,7 @@ const appRoutes: Routes = [
     SearchComponent,
     AboutComponent,
     HomeComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
