@@ -48,7 +48,7 @@ main {
                     margin: auto;
                 }
 
-                p:nth-child(2){
+                p:nth-child(2) {
                     color: grey;
                 }
             }
@@ -58,5 +58,15 @@ main {
     #instruction {
         padding: 2rem;
         grid-area: instruction;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            'img'
+            'details'
+            'instruction';
     }
 }
