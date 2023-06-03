@@ -2,9 +2,12 @@
     display: flex;
     width: 100%;
     cursor: pointer;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-bottom: 5rem;
 
     img {
-        width: 25rem;
+        width: 30rem;
     }
 
     #details {

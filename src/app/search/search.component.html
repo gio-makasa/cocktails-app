@@ -1,1 +1,7 @@
-<input type="text" placeholder="Search...">
+<input type="text" placeholder="Search..." [(ngModel)]="searchWord" (input)="Search($event.target)">
+<div *ngIf="drinks" id="results">
+    <div *ngFor="let drink of drinks" class="result" (click)="toAbout(drink.idDrink)">
+        <img [src]="drink.strDrinkThumb" [alt]="drink.strDrink">
+        <p>{{drink.strDrink}}</p>
+    </div>
+</div>

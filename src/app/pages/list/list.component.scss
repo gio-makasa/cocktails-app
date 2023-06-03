@@ -1,6 +1,7 @@
-main{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    justify-content: space-between;
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     text-align: center;
+    gap: 1rem;
 }

@@ -1,4 +1,4 @@
-input{
+input {
     width: 100%;
     padding: 1rem;
     font-size: larger;
@@ -9,4 +9,21 @@ input{
     outline: none;
     border: 0.1rem solid white;
     box-shadow: 0 0 1rem black;
+}
+
+#results {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+
+    .result {
+        text-align: center;
+        width: 19%;
+
+        img {
+            width: 100%;
+        }
+    }
 }
