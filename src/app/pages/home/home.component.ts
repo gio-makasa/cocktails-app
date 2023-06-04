@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   drink: any;
   ingredients: { measure: String; name: String; }[] = [];
+  categories: { strCategory: String }[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -21,10 +22,14 @@ export class HomeComponent {
         this.drink = data.drinks[0];
         this.checkIngr();
       })
+
+    this.http.get('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list').subscribe(
+      (data: any) => {
+        this.categories = data.drinks
+      });
   }
 
   checkIngr() {
-    console.log(this.drink);
     let i = 1;
 
     while (this.drink['strIngredient' + i]) {

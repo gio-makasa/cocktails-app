@@ -18,7 +18,6 @@
     </div>
 </div>
 
-<app-cagetories [title]="'Cocktail'"></app-cagetories>
-<app-cagetories [title]="'Shake'"></app-cagetories>
-<app-cagetories [title]="'Shot'"></app-cagetories>
-<app-cagetories [title]="'Soft Drink'"></app-cagetories>
+<section>
+    <app-cagetories *ngFor="let category of categories" [title]="category.strCategory"></app-cagetories>
+</section>

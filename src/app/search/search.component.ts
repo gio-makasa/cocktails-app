@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
-  searchWord:String = '';
+  searchWord: String = '';
   drinks: any = null;
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -23,9 +23,9 @@ export class SearchComponent {
     }
   }
 
-  toAbout(id:number) {
+  toAbout(id: number) {
     this.drinks = null;
     this.searchWord = '';
-    this.router.navigate(['/about',id]);
+    this.router.navigate(['/about', id]);
   }
 }
