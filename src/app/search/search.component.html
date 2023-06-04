@@ -1,5 +1,8 @@
 <div id="searchBox">
     <input type="text" placeholder="Search..." [(ngModel)]="searchWord" (input)="Search($event.target)">
+    <select name="alcoholic" id="alcoholic" (change)="alcoholic($event.target)">
+        <option *ngFor="let alcoholic of alcoholics" [value]="alcoholic.strAlcoholic">{{alcoholic.strAlcoholic}}</option>
+    </select>
 </div>
 
 <div *ngIf="drinks" id="results">
