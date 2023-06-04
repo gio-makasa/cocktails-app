@@ -4,4 +4,23 @@ main {
     justify-content: space-evenly;
     text-align: center;
     gap: 1rem;
+
+    .item {
+        position: relative;
+        max-width: 15rem;
+        width: 48%;
+        padding-bottom: 0.5rem;
+        cursor: pointer;
+    
+        .drinkPhoto {
+            width: 100%;
+            border-radius: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    main{
+        gap: initial;
+    }
 }

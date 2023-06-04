@@ -17,18 +17,6 @@ body {
     }
 }
 
-.item {
-    position: relative;
-    width: min-content;
-    padding-bottom: 0.5rem;
-    cursor: pointer;
-
-    .drinkPhoto {
-        width: 15rem;
-        border-radius: 1rem;
-    }
-}
-
 @media screen and (max-width:500px) {
     :root {
         font-size: 13px;
